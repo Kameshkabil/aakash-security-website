@@ -22,6 +22,20 @@ mobileLinks.forEach(link => {
 
 });
 
+document.addEventListener("click", (e) => {
+
+  const isInsideMenu = mobileMenu.contains(e.target);
+
+  const isMenuBtn = menuBtn.contains(e.target);
+
+  if(!isInsideMenu && !isMenuBtn){
+
+    mobileMenu.classList.remove("active");
+
+  }
+
+});
+
 /* COUNTER ANIMATION ON SCROLL */
 
 const counters = document.querySelectorAll('.counter');
